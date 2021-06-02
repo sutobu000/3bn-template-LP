@@ -1,4 +1,4 @@
-- var DOMAIN = "https://xxxxxx.xxx"
+- var DOMAIN = "https://archive.sutobu000.com"
 - var BASE_DOMAIN = "/"
 - var DIR_IMG = BASE_DOMAIN + "img/"
 - var DIR_IMG_CMN = BASE_DOMAIN + "img/common/"
@@ -14,11 +14,11 @@ html(lang='ja')
 	head(prefix='og: http://ogp.me/ns# website: http://ogp.me/ns/website#')
 		meta(charset='utf-8')
 		title #{_title_str}
-		// Page Setting
+		//- Page Setting
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
 		meta(name='description', content=_desc_str)
 		meta(name='keywords', content=_keys_str)
-		meta(property="og:title", content="#{_title_str}")
+		meta(property="og:title", content=_title_str)
 		meta(property="og:type", content="website")
 		meta(property="og:description", content=_desc_str)
 		meta(property="og:url", content=DOMAIN + "/")
@@ -40,7 +40,7 @@ html(lang='ja')
 		.wrapper
 			header.header
 				.header_inner
-					.logo: a(href="/"): img(src="https://placehold.jp/200x40.png", alt="サイト名")
+					.logo: a(href=`${BASE_DOMAIN}`): img(src="https://placehold.jp/200x40.png", alt="サイト名")
 					button.navBtn(data-open=false)
 						span 
 						span 
