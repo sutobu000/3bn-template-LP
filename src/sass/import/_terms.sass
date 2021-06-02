@@ -1,0 +1,86 @@
+.terms
+	section
+		text-align: left
+		&+section
+			margin:
+				top: 2rem
+		*
+			&+*
+				margin: 1rem 0 0
+	h3
+		+MIX_REM(17)
+		line-height: 1.6
+		letter-spacing: .05em
+	h4
+		+MIX_REM(16)
+		line-height: 1.6
+		letter-spacing: .05em
+	h5
+		+MIX_REM(15)
+		line-height: 1.6
+		letter-spacing: .05em
+	h6
+		+MIX_REM(14)
+		line-height: 1.6
+		letter-spacing: .05em
+	p
+		+MIX_REM(12)
+		line-height: 1.6
+		letter-spacing: .05em
+	span
+		+MIX_REM(12)
+		line-height: 1.6
+		letter-spacing: .05em
+
+	ul,ol
+		padding:
+			left: 1rem
+		&>li
+			&:before
+				content: "・"
+				position: absolute
+				top: 0
+				left: 0
+	ol
+		counter-reset: item
+	ol,ul
+		padding:
+			left: 1rem
+		&>li
+			&:before
+				content: counter(item)"."
+				counter-increment: item
+				position: absolute
+				top: 0
+				left: 0
+	li
+		position: relative
+		padding:
+			left: 1em
+		+MIX_REM(12)
+		line-height: 1.6
+		letter-spacing: .05em
+
+@media screen and (max-width: #{$break_point}px)
+	.terms
+		section
+			&+section
+				margin: 3rem 0 0
+			*
+				&+*
+					margin:
+						top: 1.5rem
+		h3
+			+MIX_FONT_VW(21)
+		h4
+			+MIX_FONT_VW(20)
+		h5
+			+MIX_FONT_VW(19)
+		h6
+			+MIX_FONT_VW(18)
+		p
+			+MIX_FONT_VW(16)
+		span
+			+MIX_FONT_VW(16)
+		li
+			+MIX_FONT_VW(16)

@@ -1,0 +1,31 @@
+// font
+$FONT_KAKU: "Hiragino Kaku Gothic ProN W3", "Hiragino Sans W3", "Yu Gothic", "Meiryo", "Helvetica Neue", "Arial", sans-serif
+$FONT_MIN: "Hiragino Mincho ProN W6", "Yu Mincho", "MS Mincho", serif
+
+$FONT_BASE: "Hiragino Kaku Gothic ProN W3", "Yu Gothic", system-ui
+
+// カラー
+$COL_BASE: #fefefe
+$COL_MAIN: #082f56
+$COL_ACCENT: #c71b21
+$COL_SUB: #2f99c4
+$COL_SUB2: #eee
+
+$DE_FONT: 16
+$COL_FONT_BASE: #333
+$COL_FONT_SUB: #fff
+
+// VW基準横幅
+$base_vw: 480
+$break_point: 767
+
+// $BREAK_POINT_PC_WIDE: 1296px
+
+// mixin 設定
+=MIX_REM($size)
+	// font-size: $size + px
+	font-size: $size / $DE_FONT + rem
+
+=MIX_FONT_VW($size)
+	// font-size: $size / 2 + px
+	font-size: $size / $base_vw * 100 + vw

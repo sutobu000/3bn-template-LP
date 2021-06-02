@@ -1,0 +1,84 @@
+@import import/variable
+@import import/_reset
+
+@import import/_terms
+
+html,body
+	width: 100%
+	height: 100%
+	font-size: 16px
+
+img
+	display: block
+	width: 100%
+	height: auto
+
+.wrapper
+	background-color: $COL_BASE
+
+.container
+	width: 100%
+
+@import import/_header
+@import import/_footer
+
+@import import/_index
+
+.pageTop
+	position: fixed
+	right: -80px
+	bottom: 0
+	z-index: 5
+	transition: .2s right ease
+	&[data-current=true]
+		right: 0
+	a
+		position: relative
+		display: block
+		width: 78px
+		height: 78px
+		border: 2px solid $COL_MAIN
+		background-color: $COL_MAIN
+		transition: background .2s ease-in-out, right .2s ease-in-out
+		&::after
+			content: ""
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%) rotate(45deg)
+			width: 10px
+			height: 10px
+			border: 2px solid $COL_BASE
+				bottom: 0
+				right: 0
+			transition: border .2s ease-in-out
+		&:hover
+			background-color: $COL_BASE
+			&::after
+				border-color: $COL_MAIN
+			span
+				color: $COL_MAIN
+	span
+		display: none
+
+@media screen and (max-width: #{$break_point}px)
+	.pageTop
+		position: relative
+		a
+			width: 100%
+			height: auto
+			padding: #{30/$base_vw*100}vw 0
+			text-align: center
+			&::after
+				top: #{10/$base_vw*100}vw
+				transform: translateX(-50%) rotate(45deg)
+
+		span
+			display: inline-block
+			color: $COL_BASE
+			+MIX_FONT_VW(16)
+			line-height: 1
+			letter-spacing: 0.05em
+			transition: color .2s ease-in-out
+

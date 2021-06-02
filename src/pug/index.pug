@@ -1,0 +1,147 @@
+extends _include/_layout
+block vars
+	- var _title_str = 'LP Site Template'; // title
+	- var _desc_str = 'LPサイトの参考テンプレート。npm scriptでpug,sassでコーディングしています。参考程度にご利用ください。作者:KidoYuta'; // descriptions
+	- var _keys_str = 'template, lp'; // keywords
+	- var _page_category = 'top'; // ページのカテゴリー(ページごとにクラスを与えてstyle管理)
+	- var _page_id = _page_category + '-page'; // ページカテゴリーの後ろに付与してIDとして使う
+	- var DIR_IMG_PAGE = "/img/" + _page_category + "/"; // イメージへのリンク
+	//- var DIR_CSS = "/css/"; // cssのリンク
+	//- var DIR_JS = "/js/"; // jsのリンク
+	- var _page_name = ''; // ページ名
+
+block link
+	//- link(rel='stylesheet', href"")
+block body
+	.container
+		section.section.section-mainVisual
+			.inner
+				.section_detail
+					h1
+						span LP Site
+						| Template
+					p
+						| LPサイトの参考テンプレート。参考程度にご利用ください。
+						br
+						strong 作者:KidoYuta
+					.contactBtn
+						a(href="#contact"): span Contact
+				.section_visual: img(src="https://placehold.jp/300x200.png", alt="LP Site Templateのイメージ")
+
+		section.section.section-01#section01
+			.inner
+				.section_detail.js-stgSL.js-stgSL-right
+					h2
+						span Section01
+						| ダミーテキスト
+						br
+						| ダミーテキストダミ
+					p
+						| ダミーテキストダミーテキストダミーテキスト
+						br
+						strong ダミーテキストダミーテキストダミーテキストダミー
+						br
+						strong ダミーテキストダミーテキスト
+						br
+						| ダミーテキストダミーテキストダミーテキスト
+
+		section.section.section-02#section02
+			.inner
+				.section_detail.js-stgSL.js-stgSL-left
+					h2
+						span Section02
+						| ダミーテキスト
+						br
+						strong  ダミーテキスト
+						| ダミ
+					p
+						| ダミーテキスト
+						strong ダミーテキスト
+						| ダミーテキスト
+						br
+						| ダミーテキストダミーテキストダミーテキストダミー
+						br
+						| ダミーテキストダミーテキスト
+						br
+						| ダミーテキストダミーテキストダミーテキスト
+				.seciton_visual.js-sliSL.js-sliSL-right
+					img(src="https://placehold.jp/300x200.png", alt="Section02のイメージ")
+
+		section.section.section-03#section03
+			.inner
+				.section_top
+					.section_detail.js-stgSL.js-stgSL-left
+						h2
+							span Section03
+							| ダミーテキスト
+							br
+							| ダミーテキストダミ
+						p
+							| ダミーテキストダミーテキストダミーテキスト
+							br
+							| ダミーテキストダミーテキストダミーテキストダミー
+							br
+							| ダミーテキストダミーテキスト
+							br
+							| ダミーテキストダミーテキストダミーテキスト
+					.seciton_visual.js-sliSL.js-sliSL-right
+						img(src="https://placehold.jp/300x200.png", alt="Section02のイメージ")
+				.section_bottom
+					.section_cardList.js-stgSL.js-stgSL-bottom
+						.section_card
+							figure: img(src="https://placehold.jp/120x150.png", alt="Section03-01のイメージ")
+							h3 Section03-01
+							p ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+						.section_card
+							figure: img(src="https://placehold.jp/120x150.png", alt="Section03-01のイメージ")
+							h3 Section03-01
+							p ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+						.section_card
+							figure: img(src="https://placehold.jp/120x150.png", alt="Section03-01のイメージ")
+							h3 Section03-01
+							p ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+						.section_card
+							figure: img(src="https://placehold.jp/120x150.png", alt="Section03-01のイメージ")
+							h3 Section03-01
+							p ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+
+		section.section.section-04#section04
+			.inner
+				.section_detail.js-stgSL.js-stgSL-left
+					h2
+						span Section04
+						strong  ダミー
+						| テキストダミ
+						br
+						strong  ダミーテキスト
+						| ダミーテキスト
+					p
+						| ダミーテキストダミーテキストダミーテキスト
+						br
+						| ダミーテキストダミーテキストダミーテキストダミー
+				.seciton_visual.js-sliSL.js-sliSL-right
+					img(src="https://placehold.jp/500x280.png", alt="Section04のイメージ")
+
+
+		section.section.section-contact#contact
+			.inner
+				.section_detail.js-stgSL.js-stgSL-left
+					h2
+						span Contact
+						| フォームからお問い合わせください
+					p
+						| ダミーテキストダミーテキストダミーテキストダミーテキスト
+				ol.section_flow.js-stgSL.js-stgSL-left
+					li ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+					li
+						| ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミー
+						span ダミーテキストダミーテキストダミーテキスト
+					li ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミ
+					li ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミー
+				include _include/_terms
+				.contactBtn.js-sliSL.js-sliSL-bottom
+					a(href=""): span Contact
+
+block script
+	//- ページ固有のjs
+	//- script(src=DIR_JS +"index.js")
