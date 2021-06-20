@@ -10,7 +10,7 @@
     "copy:manifestjson": "cpx \"src/manifest.json\" dist/",
     "copy:faviconico": "cpx \"src/favicon.ico\" dist/",
     "copy:apple-touch-iconpng": "cpx \"src/apple-touch-icon.png\" dist/",
-    "start:server": "browser-sync start -s dist -w src/*.html src/css/*.css src/js/*.js",
+    "start:server": "browser-sync start -s dist -w dist/*.html dist/css/*.css dist/js/*.js",
     "watch:pug2html": "pug src/pug/ --hierarchy -o dist/ -w -P",
     "prepare:pug2html": "pug src/pug/ --hierarchy -o dist/",
     "compile:css2cssprefix": "postcss dist/css/style.css -u autoprefixer -o dist/css/style.css",
